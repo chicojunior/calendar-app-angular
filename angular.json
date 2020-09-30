@@ -126,6 +126,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "calendar-app-angular"
+    }
+  },
+  "defaultProject": "calendar-app-angular",
+  "cli": {
+    "analytics": "9f40e382-4c5d-466e-9456-b1fe147912d7"
+  }
 }
