@@ -1,1 +1,21 @@
-<p>month works!</p>
+<div>
+  <div>
+    <h2>{{ monthName }}</h2>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <td *ngFor="let weekday of weekdays">{{ weekday }}</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of days | chunk: 7; let i = index">
+        <td class="calendar-day" *ngFor="let c of row; let j = index">
+          <div class="calendar-day-header">
+            <strong *ngIf="c.date.getMonth() === month && c.date.getDate() <= daysInMonth">{{ c.date.getDate() }}</strong>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
